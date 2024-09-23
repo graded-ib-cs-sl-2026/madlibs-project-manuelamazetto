@@ -18,24 +18,32 @@ public class App {
     /**
      * Document what this method does here!
      */
-    public void printInstructions() {
-       System.out.println ("To do the mad libs, answer the questions below!");
-    }
+    
 
-    public void printGreeting(String username){
-        System.out.println ("Hello," + username);
-    }
+
+    
 
     public String getUserName() {
-        return "David";
+        System.out.println("Please enter your name below!");
+        Scanner input = new Scanner(System.in);
+        String name = input.nextLine();
+        return name;
+       
     }
-  
-    public void doMadlib() {
-        
+
+    public void printGreeting(String userName){
+        System.out.println("Hello, " + userName);
     }
     
+
+    public void printInstructions() {
+        System.out.println ("Answer the following questions to get a fun madlib!");
+     }
     
-    
+     public void doMadlib() {
+        String nounOne = getNounOne();
+        String adjectiveOne = 
+     }
     
 
 
