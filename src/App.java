@@ -19,9 +19,30 @@ public class App {
      * Document what this method does here!
      */
     public void printInstructions() {
-       
+       System.out.println ("To do the mad libs, answer the questions below!");
+    }
+
+    public void printGreeting(String username){
+        System.out.println ("Hello," + username);
+    }
+
+    public String getUserName() {
+        return "David";
+    }
+  
+    public void doMadlib() {
+        
     }
     
+    
+    
+    
+
+
+    
+
+    
+
     // add and implement the other methods you need in this area below!
     
   
