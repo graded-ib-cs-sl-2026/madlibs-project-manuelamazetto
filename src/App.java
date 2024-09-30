@@ -12,9 +12,8 @@ public class App {
         String userName = getUserName();
         printGreeting(userName);
         printInstructions();
-        doMadlibOne();
-        doMadlibTwo();
-        doMadlibThree();
+        doMadlib();
+
     }
     
     /**
@@ -50,14 +49,20 @@ public class App {
 
     public void printInstructions() {
         System.out.println ("Put in the following information to get a fun madlib!");
-        System.out.println ("Please select which madlib you would like by typing the following number:");
-        System.out.println ("1st Story: Simple");
-        System.out.println("2nd Story: Tennis" );
-        System.out.println("3rd Story: Haunted House");
+     
      }
-
     
-     public void doMadlibOne() {
+     public void doMadlib() {
+
+        Scanner input = new Scanner (System.in);
+
+        System.out.println("What story would you like to do?");
+        System.out.println("[1] [2] [3]");
+        int storyChosen = input.nextInt(); 
+        input.nextLine(); 
+
+        if (storyChosen == 1) {
+
         String nounOne = getNounOne();
         String adjectiveOne = getAdjectiveOne();
         String adjectiveTwo = getAdjectiveTwo();
@@ -144,13 +149,17 @@ public String getVerbThree() {
     String verbThree = input.nextLine();
     return verbThree;
 }
-public void doMadlibTwo(){
+     
 
-}
-public void doMadlibThree(){
+   else if (storyChosen == 3) {
 
-}
-    
+System.out.println ("ur so cool"); 
+
+    }
+
+    else {
+System.out.println ("You did it wrong, dumbass");
+    }
 
     // add and implement the other methods you need in this area below!
     
@@ -159,5 +168,10 @@ public void doMadlibThree(){
     /* DO NOT TOUCH OR EDIT THE METHOD BELOW! ADD NO CODE BELOW THIS LINE */
     public static void main(String[] args) throws Exception {
         new App().start();
+    
+     }
     }
 }
+}
+    
+
